@@ -32,6 +32,7 @@
     "morgan": "^1.8.2",
     "run-sequence": "^1.2.2",
     "streamqueue": "^1.1.1",
+    "through2": "^2.0.3",
     "tiny-lr": "^1.0.5"
   }
 }
