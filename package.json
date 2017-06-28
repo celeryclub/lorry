@@ -6,6 +6,10 @@
     "node": ">=8.0.0"
   },
   "author": "Steve Davis <steve@celery.club>",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/celeryclub/lorry.git"
+  },
   "license": "MIT",
   "dependencies": {
     "colors": "^1.1.2",
