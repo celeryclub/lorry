@@ -89,20 +89,18 @@ Required: yes
 // Default values shown
 var config = {
   _package: require('./package.json'),
-  environments: require('./environments.json'),
   manifest: require('./manifest.json'),
   buildDirectory: 'public',
   indexOutputPath: 'index.html',
   assetOutputPath: 'assets',
   versionedAssets: true,
-  addSHAToVersion: true,
   setStrictMode: true,
   concatenateTemplates: false,
   angularModule: undefined, // (required when using concatenateTemplates)
   templateAssetOutputPath: assetOutputPath, // assetOutputPath to use in concatenated templates
   devHost: 'localhost',
-  devPort: 8082,
-  livereload: false
+  devPort: 9001,
+  livereload: true
 };
 ```
 
