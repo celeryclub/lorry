@@ -37,7 +37,6 @@ Returns an object with the following keys:
 * stylesheetUrls
 * javascriptUrls
 * metaTags
-* buildSignature // (except in standalone mode)
 ```
 
 ### `lorry.build()`
