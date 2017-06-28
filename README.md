@@ -209,10 +209,6 @@ File-based environments have the special property `base`, which specifies that t
       "//sdk.boxxspring.com/angularjs-boxxspring-sdk-2.0.10.js",
       "//localhost:8081/theme-boxxspring-sdk-1.13.0.js"
    ]
-  },
-
-  "metaTags": {
-    "com.boxxspring.property.code_name": "networka"
   }
 }
 ```
