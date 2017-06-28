@@ -64,7 +64,6 @@ Sets up a [Gulp](https://github.com/gulpjs/gulp) task. The available tasks are a
 * build // build the project - equivalent to lorry.build()
 * server // start a local server and watch for changes
 * deploy // deploy to bucket specified in environment.deploy
-* open // open browser to URL specified in environment.root
 ```
 
 ##### `taskName`
@@ -162,7 +161,6 @@ var lorry = require('lorry')(environment, config);
 lorry.installTask('build');
 lorry.installTask('server');
 lorry.installTask('deploy');
-lorry.installTask('open');
 
 lorry.setDefaultTask('server');
 ```
@@ -181,7 +179,7 @@ The following arguments will override values specified in the config object
 
 ```sh
 --environment / -e
-# Environment to use for build, deploy, and open tasks
+# Environment to use for build and deploy tasks
 # This can be an environment key from the environments object, or the path to a file that contains a complete environment object.
 # For an example, see the "Development environment" section below.
 ```
