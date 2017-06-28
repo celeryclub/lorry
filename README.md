@@ -29,7 +29,7 @@ Default value: `{}`
 
 Returns the complete configuration object - `projectConfig` merged with the default configuration.
 
-### `lorry.locals(metaTagOverrides)`
+### `lorry.locals`
 
 Returns an object with the following keys:
 
@@ -39,14 +39,6 @@ Returns an object with the following keys:
 * metaTags
 * buildSignature // (except in standalone mode)
 ```
-
-##### `metaTagOverrides`
-
-Any additional key/value pairs to merge into the existing metaTags object.
-
-Type: `Object`  
-Required: no  
-Default value: `{}`
 
 ### `lorry.build()`
 
@@ -146,7 +138,7 @@ app.use('/assets', express.static(path.join(__dirname, lorry.config.buildDirecto
 }));
 
 app.get('*', function(request, response) {
-  response.render('index.html', lorry.locals());
+  response.render('index.html', lorry.locals;
 });
 
 app.listen(app.get('port'), function() {
