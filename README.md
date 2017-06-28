@@ -29,7 +29,7 @@ Default value: `{}`
 
 Returns the complete configuration object - `projectConfig` merged with the default configuration.
 
-### `lorry.locals(metaTagOverrides)`
+### `lorry.locals`
 
 Returns an object with the following keys:
 
@@ -39,14 +39,6 @@ Returns an object with the following keys:
 * metaTags
 * buildSignature // (except in standalone mode)
 ```
-
-##### `metaTagOverrides`
-
-Any additional key/value pairs to merge into the existing metaTags object.
-
-Type: `Object`  
-Required: no  
-Default value: `{}`
 
 ### `lorry.build()`
 
@@ -72,7 +64,6 @@ Sets up a [Gulp](https://github.com/gulpjs/gulp) task. The available tasks are a
 * build // build the project - equivalent to lorry.build()
 * server // start a local server and watch for changes
 * deploy // deploy to bucket specified in environment.deploy
-* open // open browser to URL specified in environment.root
 ```
 
 ##### `taskName`
@@ -146,7 +137,7 @@ app.use('/assets', express.static(path.join(__dirname, lorry.config.buildDirecto
 }));
 
 app.get('*', function(request, response) {
-  response.render('index.html', lorry.locals());
+  response.render('index.html', lorry.locals;
 });
 
 app.listen(app.get('port'), function() {
@@ -170,7 +161,6 @@ var lorry = require('lorry')(environment, config);
 lorry.installTask('build');
 lorry.installTask('server');
 lorry.installTask('deploy');
-lorry.installTask('open');
 
 lorry.setDefaultTask('server');
 ```
@@ -189,7 +179,7 @@ The following arguments will override values specified in the config object
 
 ```sh
 --environment / -e
-# Environment to use for build, deploy, and open tasks
+# Environment to use for build and deploy tasks
 # This can be an environment key from the environments object, or the path to a file that contains a complete environment object.
 # For an example, see the "Development environment" section below.
 ```
@@ -219,10 +209,6 @@ File-based environments have the special property `base`, which specifies that t
       "//sdk.boxxspring.com/angularjs-boxxspring-sdk-2.0.10.js",
       "//localhost:8081/theme-boxxspring-sdk-1.13.0.js"
    ]
-  },
-
-  "metaTags": {
-    "com.boxxspring.property.code_name": "networka"
   }
 }
 ```
