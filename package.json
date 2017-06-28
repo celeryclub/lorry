@@ -21,7 +21,7 @@
     "gulp-clean-css": "^2.3.2",
     "gulp-concat": "^2.6.1",
     "gulp-connect": "^5.0.0",
-    "gulp-dedupe": "0.0.2",
+    "gulp-dedupe": "^0.0.2",
     "gulp-insert": "^0.5.0",
     "gulp-s3": "^0.3.0",
     "gulp-sass": "^3.0.0",
